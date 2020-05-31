@@ -236,7 +236,7 @@ NOTE: neither of these will get triggered if used by admins
    - If in chat, toggles that chat's status.
 """
 
-REPORT_HANDLER = CommandHandler("report", report)
+REPORT_HANDLER = CommandHandler("report", report, filters=Filters.group)
 SETTING_HANDLER = CommandHandler("reports", report_setting, pass_args=True)
 ADMIN_REPORT_HANDLER = RegexHandler("(?i)@admin(s)?", report)
 
